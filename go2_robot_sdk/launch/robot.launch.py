@@ -187,17 +187,17 @@ def generate_launch_description():
                     {"robot_ip": robot_ip, "token": robot_token, "conn_type": conn_type}
                 ],
             ),
-            # Node(
-            #     package="go2_robot_sdk",
-            #     executable="lidar_to_pointcloud",
-            #     parameters=[
-            #         {
-            #             "robot_ip_lst": robot_ip_lst,
-            #             "map_name": map_name,
-            #             "map_save": save_map,
-            #         }
-            #     ],
-            # ),
+            Node(
+                package="go2_robot_sdk",
+                executable="lidar_to_pointcloud",
+                parameters=[
+                    {
+                        "robot_ip_lst": robot_ip_lst,
+                        "map_name": map_name,
+                        "map_save": save_map,
+                    }
+                ],
+            ),
             Node(
                 package="rviz2",
                 namespace="",
